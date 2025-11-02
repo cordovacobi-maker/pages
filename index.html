@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Carmel Candy;
+      background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #FFFFFF;
+      margin-bottom: 40px;
+      font-size: 2.5em;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 900px;
+    }
+
+    .profile {
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .profile:hover {
+      transform: scale(1.1);
+    }
+
+    .circle {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-color: #fff;
+      overflow: hidden;
+      margin: 0 auto 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      border: 5px solid #fff;
+    }
+
+    .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .circle:hover img {
+      transform: scale(1.1);
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #6a5acd;
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #483d8b;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    .name {
+      font-weight: bold;
+      color: #FFFF;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Meet Our Team</h1>
+  <div class="container">
+    
+    <div class="profile">
+      <div class="circle"><img src="image/prof1.jpg" alt="Person 1"></div>
+      <div class="name">Cobi Cordova</div>
+      <a href="cordova port.html" target="_blank">View Profile</a>
+    </div>
+
+    <div class="profile">
+      <div class="circle"><img src="https://scontent.fdvo1-1.fna.fbcdn.net/v/t39.30808-6/571708034_2560102181050266_7752338036813094613_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG_VM53sNsH7QHXZDOJ84vevBfScR9dmQe8F9JxH12ZB3E2ojr6-LU26-nDb1v_pHu3XiNteQo9Q5vvktYmzCF_&_nc_ohc=EXlscM__OkMQ7kNvwEoqh7u&_nc_oc=Adk8ApYKnw-tT85b-u0daxhMCThp7aXAcQ0RUorvcGJXGuUTueWkoEYDIV4rG3U4yPE&_nc_zt=23&_nc_ht=scontent.fdvo1-1.fna&_nc_gid=P5HR09IB8Osq79nXOIcPgw&oh=00_Afjuc9WZ0jXFUiiFG9s_s1WLp9xPaWpqN6G80eKaJ1BOqg&oe=690D0DBE" alt="Person 2"></div>
+      <div class="name">Kristine Joy Enoy</div>
+      <a href="Enoy Port.html" target="_blank">View Profile</a>
+    </div>
+
+    <div class="profile">
+      <div class="circle"><img src="https://scontent-mnl1-2.xx.fbcdn.net/v/t39.30808-6/573288679_2601904090185391_1824188853936310616_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=xa8MskmkR9AQ7kNvwFDvgzp&_nc_oc=AdnPRTbYnwQGv7xPi5Ih8A3EckeDbmmxjuWIuitq-hnGsTgiGhQ12LASPd8Kvc6TjpImCRQZGW5S5DXvX5TKULJX&_nc_zt=23&_nc_ht=scontent-mnl1-2.xx&_nc_gid=NhD5W-624xp2vGt51ayECQ&oh=00_AfdA5zNUGTGAHkG3Gy3X1q8GSq5F2EMflXHtwNwnLae4Xw&oe=6908BED3" alt="Portrait of Laira Jean Comeros" alt="Person 3"></div>
+      <div class="name">Laira Jean Comeros</div>
+      <a href="Comeros Port.html" target="_blank">View Profile</a>
+    </div>
+
+    <div class="profile">
+      <div class="circle"><img src="https://i.ibb.co/SX05zvhs/566589322-2102508440516696-7830200912235444578-n.jpg" alt="Person 4"></div>
+      <div class="name">Jackielyn P. Abangan</div>
+      <a href="Abangan Port.html" target="_blank">View Profile</a>
+    </div>
+
+    <div class="profile">
+      <div class="circle"><img src="https://scontent.fceb1-3.fna.fbcdn.net/v/t39.30808-6/573938028_4285380318409109_1003868436256254908_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGlbS15mDM-lCo6B57agido9Hp_HNHQSz70en8c0dBLPjEuolNTPrjKEF98yx90CHUsXISmUnjdhYwWXDTA0CIU&_nc_ohc=xjhc5qjtzLMQ7kNvwGUgp5Z&_nc_oc=Admpx16ys34BiOEKZbZE9NB5Nr-VMlWhYvchr_b58N9QHgUdOlqQplzfo-wuvMi9Cmw&_nc_zt=23&_nc_ht=scontent.fceb1-3.fna&_nc_gid=Yil3tdzamVF14TtWkbaWRA&oh=00_AffHSiZUV0rVLKpqqu8-oFTm8e_tJEj9DZwcY_iEkSxYow&oe=690A9D26" alt="Person 5"></div>
+      <div class="name">Rubilla F. Ramirez</div>
+      <a href="Ramirez Port.html" target="_blank">View Profile</a>
+    </div>
+
+    <div class="profile">
+      <div class="circle"><img src="person6.jpg" alt="Person 6"></div>
+      <div class="name">Kym Garcisa</div>
+      <a href="person6.html" target="_blank">View Profile</a>
+    </div>
+
+    <div class="profile">
+      <div class="circle"><img src="prof2.jpg" alt="Person 7"></div>
+      <div class="name">Mark Jay A. Maglangit</div>
+      <a href="person7.html" target="_blank">View Profile</a>
+    </div>
+
+    <div class="profile">
+      <div class="circle"><img src="https://scontent.fdvo1-1.fna.fbcdn.net/v/t1.15752-9/575057902_2020086322127159_8477990728264409575_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeHCDbrsBhN-w2FeWG33yYP-bpoJqkm-fnhumgmqSb5-eN_P-_6_FKZiJuD2SCGaGWsMsifEiZoZ2MKtNiggLZl1&_nc_ohc=qGUSoaefjR4Q7kNvwHJQ94f&_nc_oc=Adk-OE6_yBDB4_Fc44-4b4zoVqPak1bciq-oB38jvMnGda8kTR3SWfE1-W5Yw8XmLrE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fdvo1-1.fna&oh=03_Q7cD3wHTZxcGRK4LuDisJhp5rDFaTKTjyIXpQUeWlnppG9K5-A&oe=692EFA8B" alt="Person 8"></div>
+      <div class="name">Janilla Carbaja</div>
+      <a href="Carbaja Port.html" target="_blank">View Profile</a>
+    </div>
+
+    <div class="profile">
+      <div class="circle"><img src="person9.jpg" alt="Person 9"></div>
+      <div class="name">Retchelle Peña</div>
+      <a href="person9.html" target="_blank">View Profile</a>
+    </div>
+  </div>
+</body>
+</html>

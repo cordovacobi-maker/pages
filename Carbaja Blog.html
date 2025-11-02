@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JANILA'S HORROR MOVIE BLOG</title>
+    <style>
+      body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #0d0d0d, #1a0000 80%);
+    color: #f5f5f5;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+header {
+    background: linear-gradient(135deg, #000, #330000);
+    color: #fff;
+    padding: 25px 0;
+    border-bottom: 2px solid #e63946;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 20px rgba(230, 57, 70, 0.4);
+}
+
+header #branding h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 0 0 15px #e63946;
+    animation: fadeInDown 1s ease-out;
+}
+
+header .highlight {
+    color: #e63946;
+}
+
+header nav {
+    float: right;
+    margin-top: 8px;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+header a {
+    color: #f5f5f5;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #e63946;
+    transition: width 0.3s ease;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+header a:hover {
+    color: #e63946;
+}
+
+header .current a {
+    color: #e63946;
+}
+
+
+article#main-col {
+    padding: 40px 0;
+    animation: fadeInUp 1.2s ease-in;
+}
+
+article#main-col h1 {
+    text-align: center;
+    color: #ff4d4d;
+    text-shadow: 0 0 10px #ff1e1e;
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+
+.movie {
+    margin-bottom: 50px;
+    padding: 25px;
+    background: rgba(15, 15, 15, 0.85);
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(230, 57, 70, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(5px);
+}
+
+.movie:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 77, 77, 0.5);
+}
+
+
+.movie img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto 20px;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: brightness(0.85);
+}
+
+.movie img:hover {
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+
+.movie h2 {
+    color: #ff4d4d;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #b30000;
+    position: relative;
+}
+
+.movie h2::before {
+    content: "🎬 ";
+    color: #ffcccc;
+    font-size: 1.2rem;
+}
+
+
+.movie p {
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+footer {
+    background: linear-gradient(135deg, #330000, #000);
+    text-align: center;
+    padding: 25px 0;
+    color: #eee;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    box-shadow: 0 -4px 20px rgba(230, 57, 70, 0.3);
+}
+
+footer p {
+    margin: 0;
+}
+
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav {
+        float: none;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    header li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    article#main-col h1 {
+        font-size: 1.8rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Janila's</span> Horror Movie Blog</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="Carbaja Blog.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article id="main-col">
+            <h1>Top 5 Horror Movies of 2025</h1>
+
+            <div class="movie">
+                <h2>1. Sinners</h2>
+                <img src="image/Sinners.jpeg" alt="Sinners Movie Poster">
+                <p>Directed by Ryan Coogler, this movie follows twin brothers who return to their hometown seeking a fresh start, only to confront an even greater evil. Metascore: 84.</p>
+            </div>
+
+            <div class="movie">
+                <h2>2. Weapons</h2>
+                <img src="image/Weapons.jpg" alt="Weapons Movie Poster">
+                <p>Directed by Zach Cregger, this film explores a community grappling with the mysterious disappearance of nearly an entire class of children. Metascore: 81.</p>
+            </div>
+
+            <div class="movie">
+                <h2>3. 28 Years Later</h2>
+                <img src="image/28 Years Later.jpeg" alt="28 Years Later Movie Poster">
+                <p>Directed by Danny Boyle, this movie centers on survivors of a rage virus living on an island, and the horrors they encounter when they venture to the mainland. Metascore: 77.</p>
+            </div>
+
+            <div class="movie">
+                <h2>4. Bring Her Back</h2>
+                <img src="image/Bring her Back.jpeg" alt="Bring Her Back Movie Poster">
+                <p>Directed by Danny and Michael Philippou, a brother and sister uncover a terrifying ritual at their new foster mother's home. Metascore: 75.</p>
+            </div>
+
+            <div class="movie">
+                <h2>5. Final Destination: Bloodlines</h2>
+                <img src="image/FINAL DESTINATION BLOODLINES.jpeg" alt="Final Destination: Bloodlines Movie Poster">
+                <p>Directed by Zach Lipovsky and Adam B. Stein, a college student plagued by nightmares returns home to save her family from a horrific fate. Metascore: 73.</p>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>Janila's Horror Movie Blog, Copyright &copy; 2025</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laira Jean Comeros | Portfolio</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      display: flex;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      overflow: hidden;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* LEFT SIDE */
+    .left {
+      flex: 1;
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 25px;
+      text-align: center;
+      min-height: 600px; /* Ensures consistent height */
+    }
+
+    .left img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      object-fit: cover;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .left img:hover {
+      transform: scale(1.05);
+    }
+
+    .left h1 {
+      margin: 10px 0 5px;
+      font-size: 1.8em;
+    }
+
+    .left h2 {
+      color: #3d8b77;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 15px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      text-align: left;
+      line-height: 1.7;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .about h3 {
+      color: #3d8b77;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .contact {
+      margin-top: 10px;
+      font-size: 1em;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .contact div {
+      margin: 6px 0;
+    }
+
+    .contact i {
+      color: #5acda1;
+      margin-right: 8px;
+    }
+
+    .contact a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact a:hover {
+      color: #3d8b60;
+    }
+
+    /* RIGHT SIDE */
+    .right {
+      flex: 2;
+      padding: 40px 50px;
+      overflow-y: auto;
+    }
+
+    .right section {
+      margin-bottom: 30px;
+    }
+
+    .right h3 {
+      color: #3d8b77;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .right h3 i {
+      margin-right: 10px;
+    }
+
+    .works, .education, .skills {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .works a {
+      display: block;
+      color: #5acdc7;
+      text-decoration: none;
+      margin: 5px 0;
+      transition: color 0.3s;
+    }
+
+    .works a:hover {
+      color: #3d8b60;
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+      line-height: 1.7;
+      transition: all 0.3s ease;
+    }
+
+    li:hover {
+      color: #6eb7ab;
+      transform: translateX(5px);
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      background-color: #5acd97;
+      padding: 10px 20px;
+      border-radius: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .back:hover {
+      background-color: #3d8b6d;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .right {
+        padding: 20px;
+      }
+      .left {
+        padding: 30px;
+        min-height: auto;
+      }
+      .about, .contact {
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- LEFT SIDE -->
+    <div class="left">
+      <img src="https://scontent-mnl1-2.xx.fbcdn.net/v/t39.30808-6/573288679_2601904090185391_1824188853936310616_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=xa8MskmkR9AQ7kNvwFDvgzp&_nc_oc=AdnPRTbYnwQGv7xPi5Ih8A3EckeDbmmxjuWIuitq-hnGsTgiGhQ12LASPd8Kvc6TjpImCRQZGW5S5DXvX5TKULJX&_nc_zt=23&_nc_ht=scontent-mnl1-2.xx&_nc_gid=NhD5W-624xp2vGt51ayECQ&oh=00_AfdA5zNUGTGAHkG3Gy3X1q8GSq5F2EMflXHtwNwnLae4Xw&oe=6908BED3" alt="Portrait of Laira Jean Comeros">
+
+      <h1>Laira Jean Comeros</h1>
+      <h2>UX & UI Designer</h2>
+
+      <div class="about">
+        <h3>About Me</h3>
+        <p>
+          Hi! I'm Laira, a UX/UI Designer dedicated to crafting clean, engaging, and user-focused designs.
+          I aim to create digital experiences that not only look beautiful but also make interactions simple and enjoyable.
+        </p>
+      </div>
+
+      <div class="contact">
+        <div><i class="fa-solid fa-phone"></i> <a href="tel:+639630684333">+63 963 0684 333</a></div>
+        <div><i class="fa-solid fa-envelope"></i> <a href="mailto:comeroslairajean@email.com">comeroslairajean@email.com</a></div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+      <section class="works">
+        <h3><i class="fa-solid fa-globe"></i> My Works</h3>
+        <a href="Comeros Blog.html" target="_blank">🌐 My Blog</a>
+      </section>
+
+      <section class="education">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+        <ul>
+          <li><strong>Davao Vision Colleges</strong> — Bachelor of Science in Information Technology (2023-2027)</li>
+          <li><strong>Philippine Women's College</strong> — Senior High School, STEM Strand (2021 – 2023)</li>
+          <li><strong>Jesus J. Soriano National High School</strong> — Junior High School (2017 – 2021)</li>
+        </ul>
+      </section>
+
+      <section class="skills">
+        <h3><i class="fa-solid fa-code"></i> Skills</h3>
+        <ul>
+          <li>UI/UX Design (Figma, Canva)</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Responsive Web Design</li>
+          <li>Basic Graphic Design</li>
+          <li>Collaboration & Communication</li>
+        </ul>
+      </section>
+
+      <a href="index.html" class="back">← Back to Main Page</a>
+    </div>
+  </div>
+</body>
+</html>

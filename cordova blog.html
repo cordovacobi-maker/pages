@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victoria’s Secret Angels | Fashion Show 2025</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+
+      html {
+  scroll-behavior: smooth;
+  }
+
+      body {
+      background: url('glitter-bg.png') repeat fixed;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #fcd5ce, #f8edeb, #ffe5ec);
+      background-image: url("https://hips.hearstapps.com/hmg-prod/images/candice-swanepoel-adriana-lima-bella-hadid-jasmine-tookes-news-photo-1760574533.pjpeg?crop 1xw:0.84375xh;0,0.0817xh");
+      background-size: cover; 
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      color: #4a3c4f;
+      line-height: 1.8;
+    }
+   body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1); /* faint white */
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body {
+  scrollbar-color: rgba(255,255,255,0.1) transparent; /* Firefox */
+  scrollbar-width: thin;
+} 
+
+
+    header {
+      background: rgba(255, 182, 193, 0.9);
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-bottom: 4px solid #f7c0c0;
+    }
+
+    header h1 {
+      font-family: 'Trajan Pro Regular', serif;
+      font-size: 3em;
+      color: #000000;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    header p {
+      font-style: italic;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+	
+.logo {
+  width: 130px;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 50%; 
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.6);
+  animation: fadeGlow 2.5s ease-in-out;
+}
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(white, rgba(255, 192, 203, 0.7));
+  border-radius: 50%;
+  opacity: 0;
+  animation: sparkleTwinkle 3s infinite ease-in-out;
+}
+.sparkle1 {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.sparkle2 {
+  bottom: 15%;
+  right: 25%;
+  animation-delay: 1s;
+}
+
+.sparkle3 {
+  top: 30%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fadeGlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    box-shadow: 0 0 0 rgba(255, 182, 193, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 182, 193, 0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+  }
+}
+
+
+
+.photo-card {
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #f8a5b6;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 280px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-card img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.photo-card:hover {
+  transform: scale(1.05);
+  border-color: #ffb6c1;
+  box-shadow: 0 0 25px rgba(255, 192, 203, 0.7), 0 0 45px rgba(255, 182, 193, 0.4);
+}
+
+.photo-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+.photo-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 182, 193, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.photo-card:hover::after {
+  opacity: 1;
+  animation: shimmer 1.2s linear forwards;
+}
+
+#glamour {
+  background: linear-gradient(to right, #fff0f5, #ffe4eb);
+  padding: 80px 5%;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0 10px 40px rgba(255, 182, 193, 0.4);
+  margin: 60px auto;
+  max-width: 1300px;
+}
+	
+     #glamour {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #fff, #ffe6f0);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  margin: 60px auto;
+  max-width: 100%;
+}
+
+#glamour h2 {
+  font-family: 'Playfair Display', serif;
+  color: #e75480;
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+
+#glamour p {
+  color: #444;
+  font-size: 1.05em;
+  margin-bottom: 40px;
+}
+
+
+.glamour-text {
+  flex: 1.2;
+  background: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  padding: 40px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.1em;
+  text-align: justify;
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glamour-text:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 35px rgba(255, 105, 180, 0.3);
+}
+
+.glamour-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.glamour-photo {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 5px double #ffc0cb;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 280px;
+}
+
+.glamour-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.glamour-photo img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.glamour-photo p {
+  color: #b85c8a;
+  font-style: italic;
+  font-size: 0.95em;
+}
+
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #e75480;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: justify;
+      padding: 0 20px;
+    }
+
+
+    .frame {
+      background-color: #fff;
+      border: 8px double #ffc0cb;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .frame:hover {
+      transform: scale(1.05);
+    }
+
+    .frame img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #ffe6f0;
+      margin-top: 60px;
+      border-top: 2px solid #f7c0c0;
+    }
+
+    footer p {
+      color: #a05278;
+      font-size: 0.95em;
+    }
+
+    .socials {
+      margin: 15px 0;
+    }
+
+    .socials a {
+      color: #e75480;
+      margin: 0 10px;
+      font-size: 1.5em;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #ff9ebb;
+    }
+.show-highlights {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #fff, #ffe6f0);
+  border-radius: 20px;
+  margin: 60px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-width: 1100px;
+}
+
+.show-highlights h2 {
+  font-family: 'Playfair Display', serif;
+  color: #e75480;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+}
+
+.model-gallery, .performer-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+  justify-items: center;
+}
+
+.model-card, .performer-card {
+  background-color: #fff;
+  border: 5px double #ffc0cb;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 280px;
+  padding: 20px;
+  text-align: center;
+}
+
+.model-card:hover, .performer-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.model-card img, .performer-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f9b8c4;
+  margin-bottom: 15px;
+}
+
+.model-card h3, .performer-card h3 {
+  margin: 10px 0 8px;
+  color: #e75480;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.song {
+  color: #d26fa3;
+  font-style: italic;
+  font-size: 0.95em;
+}
+
+.model-description, .performer-description {
+  color: #555;
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.angelTrail {
+  position: absolute;
+  width: 16px;
+  height: 8px;
+  border-radius: 50% 50% 0 0;
+  pointer-events: none;
+  opacity: 0.8;
+  filter: blur(2px);
+  transform-origin: center;
+  animation: angelFloat 1.2s ease-out forwards;
+  z-index: 9999;
+  box-shadow: 0 0 12px rgba(255, 192, 203, 0.7);
+}
+
+@keyframes angelFloat {
+  0% {
+    transform: scale(1) translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.3) translateY(-10px) rotate(10deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(0.6) translateY(-25px) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+
+.vs-collage {
+  position: fixed;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  background: rgba(255, 240, 245, 0.3);
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 0 15px rgba(255, 182, 193, 0.3);
+  z-index: 1;
+}
+
+
+.left-collage {
+  left: 0;
+}
+
+.right-collage {
+  right: 0;
+}
+
+
+.vs-collage img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.vs-collage img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.8), 0 0 40px rgba(255, 240, 245, 0.6);
+}
+
+
+.main-content {
+  margin: 0 220px; /* Prevent overlap with side galleries */
+}
+
+
+.vs-collage img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.vs-collage img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vs-collage img:nth-child(odd) {
+  border-radius: 50px 10px 50px 10px;
+}
+.vs-collage img:nth-child(even) {
+  border-radius: 10px 50px 10px 50px;
+}
+
+
+.showcase-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  overflow: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+.showcase-modal-content {
+  display: block;
+  margin: 60px auto;
+  max-width: 90%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  object-fit: contain;
+  box-shadow: 0 0 40px rgba(255,192,203,0.8);
+  animation: popUp 0.4s ease;
+}
+
+.showcase-close {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index: 10000;
+}
+
+.showcase-close:hover {
+  transform: scale(1.2);
+}
+
+.showcase-caption {
+  text-align: center;
+  color: #ffe4ec;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+@keyframes popUp {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.side-img {
+  opacity: 0;
+  transform: translateY(40px); /* slightly lower, for smooth slide-up */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.side-img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.side-img:nth-child(1) { transition-delay: 0.1s; }
+.side-img:nth-child(2) { transition-delay: 0.3s; }
+.side-img:nth-child(3) { transition-delay: 0.5s; }
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+	 <div class="logo-container">
+    <img src="image/vs-logo.png" class="logo">
+    <div class="sparkle sparkle1"></div>
+    <div class="sparkle sparkle2"></div>
+    <div class="sparkle sparkle3"></div>
+  </div>
+    <h1>Victoria’s Secret Fashion Show 2025</h1>
+    
+  </header>
+
+  <div class="container">
+    <h2>The Angels Take the Stage Again</h2>
+
+      <p>
+      Ever since I was young I was always in awe on how Victoria Secret angels looked, how big and astonishing those wings are, and how they carry themselves in a stadium full of people and celebrities. I've always dreamt of becoming one, I really want to become one lol. Anyways, here is my blog about the Victoria's Secret Fasion Show 2025.    </p>
+    
+      <p>
+      After a year of transformation, the iconic <strong>Victoria’s Secret Fashion Show</strong> made a dazzling comeback in 2025 
+      reimagined with a fresh, empowering vision. This year’s event blended timeless elegance with modern femininity, showcasing not only
+      stunning lingerie but also artistry, inclusivity, and confidence. 
+    </p>
+    <p>
+      The runway lit up with familiar faces and new stars, all embracing individuality and self-expression.
+      The runway shimmered as models strutted with grace, while music performers, light, and dancers combined
+      into a breathtaking showcase of beauty in every form.
+    </p>
+
+    <p>
+      Every angel shined in their own way. So did the performers of the show. But below are my <strong>favourite looks from this year's runway</strong>. I've also listed the artists and the songs they performed in this year's runway.    </p>
+
+
+   <section class="show-highlights">
+  <h2>The Angels & Models</h2>
+<div id="showcaseModal" class="showcase-modal">
+  <span class="showcase-close">&times;</span>
+  <img class="showcase-modal-content" id="showcaseFullImg">
+  <div class="showcase-caption" id="showcaseCaption"></div>
+</div>
+
+  <div class="model-gallery scroll-animate">
+    <div class="model-card">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/adriana-lima-at-the-2025-victorias-secret-fashion-show-held-news-photo-1760574847.pjpeg?crop=0.621xw:1.00xh;0.175xw,0" alt="Adriana Lima"class="clickable-showcase">
+
+      <h3>Adriana Lima</h3>
+      <p class="model-description">
+       Rocking a latex bodysuit and knee-high boots paired with flowing shriveled silver wings
+      </p>
+    </div>
+
+
+    <div class="model-card scroll-animate">
+      <img src="https://58v76y8z87lo.hellomagazine.com/horizon/landscape/70795cdabe73-gettyimages-2240853512.jpg" alt="Candice Swanepoel"class="clickable-showcase">
+      <h3>Candice Swanepoel</h3>
+      <p class="model-description">
+        Candice came down from heaven to blow viewers minds away with a metal and bronze esque lingerie and of course the signature extravagant wings, coated with copper (p.s my personal fave look of all <3)
+      </p>
+    </div>
+
+    <div class="model-card scroll-animate">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/gigi-hadid-at-the-2025-victorias-secret-fashion-show-held-news-photo-1760575560.pjpeg?resize=980:*" alt="Gigi Hadid"class="clickable-showcase">
+      <h3>Gigi Hadid</h3>
+      <p class="model-description">
+        Embodied with white mini peplum dress and ginormous white padded wings.
+      </p>
+    </div>
+    
+     <div class="model-card scroll-animate">
+      <img src="https://vsnow.victoriassecret.com/wp-content/uploads/sites/2/2025/10/101625-shop-2-%E2%80%93-3.png" alt="Alex Consani"class="clickable-showcase">
+      <h3>Alex Consani</h3>
+      <p class="model-description">
+       Slaying a silky bold red bra and jammies with a glossy deep red wings</p>
+    </div>
+
+     <div class="model-card scroll-animate">
+      <img src="https://assets.vogue.com/photos/68f0ac4a597fdddc4addb278/master/w_2560%2Cc_limit/2241294261" alt="Bella Hadid"class="clickable-showcase">
+      <h3>Bella Hadid</h3>
+      <p class="model-description">
+        Dazzling in a silver corset adorned with white Swarovski crystals.      </p>
+    </div>
+
+      <div class="model-card scroll-animate">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/anok-yai-walks-the-runway-for-victorias-secret-fashion-show-news-photo-1760623658.pjpeg?crop=1xw:1xh;center,top&resize=980:*" alt="Anok Yai"class="clickable-showcase">
+      <h3>Anok Yai</h3>
+      <p class="model-description">
+        Strutting with white lace lingerie and pink ruffled wings and stockings.
+      </p>
+    </div>
+
+
+  </div>
+
+  <h2>Live Performers</h2>
+<div id="showcaseModal" class="showcase-modal">
+  <span class="showcase-close">&times;</span>
+  <img class="showcase-modal-content" id="showcaseFullImg">
+  <div class="showcase-caption" id="showcaseCaption"></div>
+</div>
+  <div class="performer-gallery scroll-animate scroll-animate">
+    <div class="performer-card">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-2240831677-68f03b636a9b3.jpg?resize=980:*" alt="Karol G"class="clickable-showcase">
+      <h3>Karol G</h3>
+      <p class="song">Performed: <em>"Ivonny Bonita, Latina Foreva"</em></p>
+      <p class="performer-description">
+        Karol G lit up the runway with a very catchy and make you wanna groove type of music.
+      </p>
+    </div>
+
+    <div class="performer-card scroll-animate">
+      <img src="https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2025/10/16/d0ddeb47-f9e0-4b3f-9988-26c1b4e46488_5976ed62.jpg" alt="Twice"class="clickable-showcase">
+      <h3>Twice</h3>
+      <p class="song">Performed: <em>"Strategy, This is for"</em></p>
+      <p class="performer-description">
+       Though they're incomplete Twice brought out catchy pop dance beats which makes you want them perform TWICE (pun intended)
+      </p>
+    </div>
+
+    <div class="performer-card scroll-animate">
+      <img src="https://www.billboard.com/wp-content/uploads/2025/10/02-missy-elliott-victorias-secret-fashion-show-2025-billboard-1800.jpg" alt="Missy Elliot"class="clickable-showcase">
+      <h3>Missy Elliot</h3>
+      <p class="song">Performed: <em>"Get Ur Freak On, Work It, Lose Control"</em></p>
+      <p class="performer-description">
+        You could never expect less from Ms. Missy Elliot. From bars to bars, rhyme to rhyme. The legendary rapper still hasn't lose her charm after all these years of not performing.
+      </p>
+    </div>
+
+    <div class="performer-card scroll-animate">
+      <img src="https://cdn01.justjared.com/wp-content/uploads/headlines/2025/10/beer-vs-perform.jpg" alt="Madison Beer"class="clickable-showcase">
+      <h3>Madison Beer</h3>
+      <p class="song">Performed: <em>"Make You Mine, Bittersweet, Yes Baby"</em></p>
+      <p class="performer-description">
+       Her performance is so bewitching. The way she performed Make You Mine really proved that she deserved to be one of the performers this year.
+      </p>
+    </div>
+    
+  </div>
+</section>
+
+
+<section id="glamour">
+  <h2>Behind the Glamour</h2>
+  <p>
+    Step behind the curtain and discover the artistry, hard work, and confidence that define the Victoria’s Secret Fashion Show.  The Angels prepare not only their looks but also their mindsets—embracing empowerment and grace. The show’s soundtrack featured collaborations between top artists, adding energy to the ethereal runway. The creative direction this year embraced diversity and individuality. From the feathered wings to the satin robes, every detail told a story celebrating strength and softness side by side. Women of different backgrounds, culture, ethnicities, bodies, and skin color uniting as one to celebrate feminity and its uniqueness in every women. It is just not about flaunting bodies, big extravagant wings, and shiny and shimmering emblishments and undergarments. Its women empowerment.
+   </p>
+
+  <p>
+      Victoria’s Secret continues to evolve — honoring its heritage while championing modern femininity.
+      The message is clear: every woman deserves to feel like an angel.
+    </p>
+
+<div id="showcaseModal" class="showcase-modal">
+  <span class="showcase-close">&times;</span>
+  <img class="showcase-modal-content" id="showcaseFullImg">
+  <div class="showcase-caption" id="showcaseCaption"></div>
+</div>
+  <div class="glamour-gallery">
+    <div class="glamour-photo scroll-animate">
+      <img src="https://akns-images.eonline.com/eol_images/Entire_Site/20251016/60de4021-0fec-48dd-bfd1-bbe9b9515874_1760630937.jpg?fit=around%7C1080:1080&output-quality=90&crop=1080:1080;center,top" alt="Barbara Palvin" class="clickable-showcase">
+  </div>
+
+  <div class="glamour-photo scroll-animate">
+      <img src="https://i0.wp.com/www.nydailynews.com/wp-content/uploads/2025/10/GettyImages-2241224100.jpg?fit=620%2C9999px&ssl=1" alt="Ashley Graham"class="clickable-showcase">
+  </div>
+
+    <div class="glamour-photo scroll-animate">
+      <img src="https://images.toofab.com/image/e9/o/2025/10/15/e9bc0dbb062f4570941fa23382a11f48_lg.jpg" alt="Backstage prep"class="clickable-showcase">
+  </div>
+      
+    <div class="glamour-photo scroll-animate">
+      <img src=" https://vsnow.victoriassecret.com/wp-content/uploads/sites/2/2025/10/101625-shop-4-%E2%80%93-3.png"class="clickable-showcase">
+  </div>
+
+   <div class="glamour-photo scroll-animate">
+      <img src="https://cdn.mos.cms.futurecdn.net/6zUAfUtosQDC2XcNiMH58G.jpg"class="clickable-showcase">
+  </div>
+  
+   <div class="glamour-photo scroll-animate">
+      <img src="https://pagesix.com/wp-content/uploads/sites/3/2025/10/angel-reese-2025-113521524.jpg?w=682"class="clickable-showcase">
+  </div>
+
+
+</section>
+
+ <script>
+const angelColors = ['#ffd6e7', '#ffe9f0', '#fff5f8', '#ffcce0'];
+  const angelTrails = [];
+
+  document.addEventListener('mousemove', (e) => {
+    const angelTrail = document.createElement('div');
+    angelTrail.className = 'angelTrail';
+    document.body.appendChild(angelTrail);
+
+    
+    const color = angelColors[Math.floor(Math.random() * angelColors.length)];
+    angelTrail.style.background = color;
+
+    
+    angelTrail.style.left = `${e.pageX}px`;
+    angelTrail.style.top = `${e.pageY}px`;
+
+    
+    angelTrail.style.transform = `rotate(${Math.random() * 45 - 20}deg)`;
+
+    
+    setTimeout(() => {
+      angelTrail.remove();
+    }, 1200);
+  });
+</script>
+
+<div class="vs-collage left-collage">
+  <img src="https://hips.hearstapps.com/hmg-prod/images/bella-hadid-at-the-2025-victorias-secret-fashion-show-held-news-photo-1760573650.pjpeg?resize=980:*" alt="Bella Hadid"class="clickable-showcase side-img">
+  <img src="https://www.the-sun.com/wp-content/uploads/sites/6/2025/10/JG-COMP-BARBIE-F-VS-OP.jpg?quality=80&strip=all" alt="Barbie Ferreira"class="clickable-showcase side-img">
+  <img src="https://content.api.news/v3/images/bin/8624ca95125584c629d97b34bb245b21" alt="Doutzen Kroes"class="clickable-showcase side-img">
+  <img src="https://hips.hearstapps.com/hmg-prod/images/jasmine-tookes-at-the-2025-victorias-secret-fashion-show-news-photo-1760580087.pjpeg?resize=980:*" alt="Jasmine Tookes"class="clickable-showcase side-img">
+</div>
+
+
+<div class="vs-collage right-collage">
+  <img src="https://cdn.mos.cms.futurecdn.net/eQAEe5ThH95potnjU2jHoP.jpg"alt="Angel Reese" class="clickable-showcase side-img">
+  <img src="https://www.the-sun.com/wp-content/uploads/sites/6/2025/10/us-model-ashley-graham-walks-1031380853.jpg?w=640" alt="Ashley Graham"class="clickable-showcase side-img">
+  <img src="https://www.hola.com/us/horizon/43/1b536625e640-gettyimages-2178649418.jpg" alt="Awar Odhiang"class="clickable-showcase side-img">
+  <img src="https://akns-images.eonline.com/eol_images/Entire_Site/20251015/fd286cd5-a1a3-4bbf-8a09-6dd1316a9106_1760578038.jpg?fit=around%7C776:1254&output-quality=90&crop=776:1254;center,top" alt="Alessandra Ambrosio"class="clickable-showcase side-img">
+</div>
+
+<script>
+const images = document.querySelectorAll('.vs-collage img');
+
+window.addEventListener('scroll', () => {
+  images.forEach(img => {
+    const rect = img.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      img.classList.add('visible');
+    }
+  });
+});
+</script>
+
+<div id="vsModal" class="vs-modal">
+  <span class="vs-close">&times;</span>
+  <img class="vs-modal-content" id="vsModalImg">
+  <div class="vs-caption"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("showcaseModal");
+  const modalImg = document.getElementById("showcaseFullImg");
+  const caption = document.getElementById("showcaseCaption");
+  const closeBtn = document.querySelector(".showcase-close");
+  
+  // When any clickable image is clicked
+  document.querySelectorAll(".clickable-showcase").forEach(img => {
+    img.addEventListener("click", function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      caption.textContent = this.alt;
+    });
+  });
+
+  // Close when X is clicked
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Close when clicking outside the image
+  modal.addEventListener("click", e => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header"); // your header element
+  const sideImages = document.querySelectorAll(".side-img");
+
+  function toggleSideImages() {
+    const headerBottom = header.getBoundingClientRect().bottom;
+
+    if (headerBottom <= 0) {
+      // Header is out of view → show side images
+      sideImages.forEach(img => img.classList.add("visible"));
+    } else {
+      // Header is still visible → hide side images
+      sideImages.forEach(img => img.classList.remove("visible"));
+    }
+  }
+
+  window.addEventListener("scroll", toggleSideImages);
+});
+
+</script>
+
+ <script>
+    
+    const sections = document.querySelectorAll('.breed');
+
+    const revealOnScroll = () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          sec.classList.add('show');
+        }
+      });
+    };
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const animatedItems = document.querySelectorAll(".scroll-animate");
+
+  const showOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85; // 85% from top
+
+    animatedItems.forEach(item => {
+      const itemTop = item.getBoundingClientRect().top;
+
+      if (itemTop < triggerBottom) {
+        item.classList.add("show");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", showOnScroll);
+  showOnScroll(); // run once on load
+});
+</script>
+
+<header>
+    <a href="cordova port.html" class="socials">⬅ Back</a>
+  </header>
+
+  <footer>
+    <div class="socials">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    <p>© 2025 Victoria’s Secret Angels Blog | Designed by Cobi Cordova for fashion lovers everywhere.</p>
+  </footer>
+</body>
+</html>

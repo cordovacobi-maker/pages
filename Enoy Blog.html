@@ -1,0 +1,240 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Breeds Blog</title>
+  <style>
+    /* 🌙 General Page Style */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #f8f8f8;
+      background: linear-gradient(to bottom right, #2b3a4b, #0d1117);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* 🐱 Header Section */
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      color: #ffd480;
+      text-shadow: 2px 2px 8px #000;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #e6e6e6;
+      max-width: 600px;
+      margin: 10px auto 0;
+    }
+
+    /* 🐾 Blog Section */
+    .breed {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 10%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .breed.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .breed img {
+      width: 320px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+      margin-right: 40px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .breed img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(255, 213, 128, 0.5);
+    }
+
+    .breed .text {
+      max-width: 600px;
+    }
+
+    .breed h2 {
+      color: #ffcb80;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .breed p {
+      color: #d6e6ff;
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+
+    /* 🐾 Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      color: #f4dca3;
+      font-size: 0.9em;
+      letter-spacing: 0.5px;
+    }
+
+    /* 🌀 Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 📱 Responsive */
+    @media (max-width: 768px) {
+      .breed {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .breed img {
+        margin: 0 0 20px 0;
+      }
+    }
+	
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🐾 The Wonderful World of Cat Breeds</h1>
+    <p>Discover the beauty, charm, and uniqueness of cat breeds around the world. Each one has a special personality and story.</p>
+  </header>
+
+  <main>
+    <section class="breed">
+      <img src="https://th.bing.com/th/id/R.ff2b117a1b0a31ca0337350fb7b6a414?rik=zciiDhYA5Dwojg&riu=http%3a%2f%2f3.bp.blogspot.com%2f-XGuY67Abfak%2fT-XBkZBfvdI%2fAAAAAAAACrI%2fB3gqLaquQbY%2fs1600%2fPersian%252BCat%252Bimage.jpg&ehk=wjwfiVl20l3Zclx6Om584iY8MO4dxPbFn3CxUFRxXSk%3d&risl=&pid=ImgRaw&r=0s" alt="Persian Cat">
+      <div class="text">
+        <h2>Persian Cat</h2>
+        <p>The Persian is known for its long, luxurious coat and calm temperament. They love peaceful environments and gentle affection, making them perfect companions.</p>
+      </div>
+    </section>
+
+    <section class="breed">
+      <img src="https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/fca42f04-2474-4302-a238-990c8aebfe8c/Siamese_cat_1110x740.jpg" alt="Siamese Cat">
+      <div class="text">
+        <h2>Siamese Cat</h2>
+        <p>Siamese cats are social, affectionate, and intelligent. Recognized by their sleek coat and bright blue eyes, they’re one of the oldest and most famous cat breeds.</p>
+      </div>
+    </section>
+
+    <section class="breed">
+      <img src="https://www.zooplus.de/magazin/wp-content/uploads/2017/03/fotolia_138361424.jpg" alt="Maine Coon">
+      <div class="text">
+        <h2>Maine Coon</h2>
+        <p>One of the largest domesticated cat breeds, Maine Coons are friendly, playful, and intelligent. Their tufted ears and fluffy tails make them resemble tiny lions.</p>
+      </div>
+    </section>
+
+    <section class="breed">
+      <img src="https://wallpapercave.com/wp/wp2495202.jpg" alt="Bengal Cat">
+      <div class="text">
+        <h2>Bengal Cat</h2>
+        <p>Bengal cats have a wild appearance with leopard-like spots. They’re energetic, curious, and love climbing and exploring their surroundings.</p>
+      </div>
+    </section>
+
+    <section class="breed">
+      <img src="https://cdn.shopify.com/s/files/1/2668/1922/files/british-shorthair-1.jpg?v=1689089942" alt="British Shorthair">
+      <div class="text">
+        <h2>British Shorthair</h2>
+        <p>Known for their round face and plush coat, British Shorthairs are calm and affectionate. They’re excellent companions and adapt well to apartment life.</p>
+      </div>
+    </section>
+
+    <section class="breed">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.p-iN_xEgd5X7x79FZ-2grAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sphynx Cat">
+      <div class="text">
+        <h2>Sphynx Cat</h2>
+        <p>The hairless Sphynx is affectionate, playful, and loves attention. Despite their bald look, they’re warm and cuddly — like little hot water bottles!</p>
+      </div>
+    </section>
+
+    <section class="breed">
+      <img src="https://cat-world.com/wp-content/uploads/2017/06/ragdoll-cat2.jpg" alt="Ragdoll Cat">
+      <div class="text">
+        <h2>Ragdoll Cat</h2>
+        <p>Ragdolls are large, soft, and affectionate cats that go limp when you pick them up — hence their name. They adore human company and love to cuddle.</p>
+      </div>
+    </section>
+
+    <section class="breed">
+      <img src="https://images.alphacoders.com/772/thumb-1920-772444.jpg" alt="Abyssinian Cat">
+      <div class="text">
+        <h2>Abyssinian Cat</h2>
+        <p>Among the oldest known breeds, Abyssinians are active and curious. Their ticked coats and graceful movements make them look like tiny wildcats.</p>
+      </div>
+    </section>
+
+    <section class="breed">
+      <img src="https://i1.wp.com/critterfacts.com/wp-content/uploads/2020/08/An-orange-Scottish-Fold-kitten.jpg?fit=1000%2C667&ssl=1" alt="Scottish Fold">
+      <div class="text">
+        <h2>Scottish Fold</h2>
+        <p>Known for their folded ears and round faces, Scottish Folds are affectionate and calm. They bond closely with their owners and enjoy a quiet environment.</p>
+      </div>
+    </section>
+
+    <section class="breed">
+      <img src="https://hypoallergenichomes.com/wp-content/uploads/2020/07/norwegian-forest-cat-hypoallergenic.jpg" alt="Norwegian Forest Cat">
+      <div class="text">
+        <h2>Norwegian Forest Cat</h2>
+        <p>This majestic breed has a thick, waterproof coat and a gentle nature. Norwegian Forest Cats are strong, independent, yet loving companions.</p>
+      </div>
+    </section>
+  </main>
+  
+  <header>
+    <a href="Enoy Port.html" class="back-btn">⬅ Back</a>
+  </header>
+
+  <footer>
+    <p>© 2025 Cat Lovers Blog | Designed by Kristine 🐾</p>
+  </footer>
+
+  <script>
+    // 🪶 Fade-in effect on scroll
+    const sections = document.querySelectorAll('.breed');
+
+    const revealOnScroll = () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          sec.classList.add('show');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>
